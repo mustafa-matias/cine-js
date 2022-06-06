@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTI Cinema</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/860/860158.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&family=Montserrat:wght@300&family=Raleway:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">INTI Cinema 🎬</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active linkNav" href="../index.html">Inicio
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link linkNav" href="../index.html#irCartelera">Cartelera</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link linkNav" href="../index.html#irCartelera">Tienda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link linkNav" href="./complejo.html">Complejo</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+          </nav>
+    </header>
+    <main> 
+      <div id="cronometro" class="FijarCronometro ">
+        <p class="text-center">Tu compra expira en:</p>
+        <div id="cronometro" class="estructuraCronometro">
+        <div class="bloqueCronometro">
+          <p class="tiempo" id="minutos">00</p>
+          <p class="tiempoDescripcion">minutos</p>
+        </div>
+          <div class="bloqueCronometro">
+            <p class="tiempo" id="segundos">00</p>
+            <p class="tiempoDescripcion">segundos</p>
+          </div>
+        </div>
+      </div>
+      <div class="gridPrincipal">
+        <div class="titulo"><h2>Finalizá tu compra</h2></div>
+        <div class="area1">
+          <div class="formFijarCarrito">          
+            <h3>Productos Seleccionados</h3>
+            <div class=" order-md-last formCarrito">
+              <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-success">Tu Carrito</span>
+                <span id="contadorCompra" class="badge bg-success rounded-pill">0</span>
+              </h4>
+              <ul id="listaCaritoCompra"class="list-group mb-3">
+                <li id="listaTotal" class="list-group-item d-flex justify-content-between bg-total">
+                  <span id="spanTotal" class="fontTotal ">Total</span>
+                  <span id="totalCompra" class="fontTotal">$0</span>
+                </li>
+              </ul>
+              <form class="card p-2">
+                <div class="input-group">
+                  <input id="inputDescuento" type="text" class="form-control" placeholder="Código de descuento" minlength="1" maxlength="10">
+                  <button id="formDescuento" type="submit" class="btn btn-secondary">Aplicar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="area2">
+          <div class="marginAuto">
+            <div class="">
+              <h2 class="">Datos Personales </h2>
+              <form id="formularioCompra" class="needs-validation">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Ingrese su nombre..." value="" required>
+                    <div class="invalid-feedback">
+                      Es necesario que ingrese su nombre.
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Ingrese su apellido..." value="" required>
+                    <div class="invalid-feedback">
+                      Es necesario que ingrese su apellido.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="email" class="form-label">E-mail de Contacto</label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+                    <div class="invalid-feedback">
+                      Por favor ingrese su e-mail.
+                    </div>
+                  </div>
+                  <hr class="my-4">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="same-address">
+                    <label class="form-check-label" for="same-address">Deseo recibir información vía e-mail de los próximos estrenos.</label>
+                  </div>
+                  <hr class="my-4">
+                  <h3 class="">Forma de Pago</h3>
+                  <div class="my-3">
+                    <div id="tipoTarjeta" class="form-check">
+                      <input id="credit" name="paymentMethod" type="radio" class="form-check-input bg-secondary"  value="1" required>
+                      <label class="form-check-label " for="credit">Tarjeta de Crédito </label>
+                    </div>
+                    <div class="form-check">
+                      <input id="debit" name="paymentMethod" type="radio" class="form-check-input bg-secondary " value="2" required>
+                      <label class="form-check-label" for="debit">Tarjeta de Débito</label>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <label for="entidad" class="form-label">Seleccione entidad de su tarjeta</label>
+                    <select class="form-select" id="entidad" required>
+                      <option disabled selected value="0">Seleccione...</option>
+                      <option value="1">Visa</option>
+                      <option value="2">Mastercard</option>
+                      <option value="3">American Express</option>
+                      <option value="4" >Otra</option>                    </select>
+                    <div class="invalid-feedback">
+                      Seleccione entidad de su tarjeta.
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="state" class="form-label">Selecioné cantidad de pagos...</label>
+                    <select id="pagos" class="form-select" id="state"  required>
+                      <option disabled >Eliga cuotas...</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Complete la forma de pago.
+                    </div>
+                  </div>
+                  <div class="row gy-3">
+                    <div class="col-md-6">
+                      <label for="cc-name" class="form-label">Nombre del titular de la tarjeta</label>
+                      <input type="text" id="titularTarjeta" class="form-control" id="cc-name" placeholder="" required>
+                      <small class="text-muted">Como figura en la tarjeta...</small>
+                      <div class="invalid-feedback">
+                        El nombre del titular de la tarjeta es requerido.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="cc-number" class="form-label">Número de la Tarjeta</label>
+                      <input type="text" class="form-control" id="serieTarjeta" placeholder="Ingrese los números sin espacio ni guiones..." required minlength="19" maxlength="19">
+                      <div class="invalid-feedback">
+                        Este campo es obligatorio.
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="mes" class="form-label">Vencimiento</label>
+                      <select class="form-select" id="mes" required>
+                        <option value="0" disabled selected>Mes</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Seleccione el mes que vence su tarjeta.
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="año" class="form-label">Año</label>
+                      <select class="form-select" id="anio" required>
+                        <option value="0" disabled selected>Año</option>
+                        <option value="22">2022</option>
+                        <option value="23">2023</option>
+                        <option value="24">2024</option>
+                        <option value="25">2025</option>
+                        <option value="26">2026</option>
+                        <option value="27">2027</option>
+                        <option value="28">2028</option>
+                        <option value="29">2029</option>
+                        <option value="30">2030</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Seleccione el año que vence su tarjeta.
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="cc-cvv" class="form-label">CVV</label>
+                      <input type="text" class="form-control" id="cc-cvv" placeholder="Código de seguridad" required maxlength="3">
+                      <div class="invalid-feedback">
+                        Complete su código de seguridad.
+                      </div>
+                    </div>
+                  </div>
+                <hr class="my-4">
+                <div class="tarjetaCredito gridTarjeta">
+                  <div class="logo"><img src="https://cdn-icons-png.flaticon.com/512/3876/3876951.png" alt="chip tarjeta"></div>
+                  <div id="tipoTarjetaRadio"class="tipo"><p>TARJETA DE CREDITO / DEBITO</p></div>
+                  <div class="banco" id="entidadCard"><p>ENTIDAD</p></div>
+                  <div class="nombre" id="nombreCard"><p>NOMBRE DEL TITULAR</p></div>
+                  <div class="numero">
+                    <div class="NumTarjeta">
+                      <div id="numeroCard0" class="d-inline celdaTarjeta">0</div>
+                      <div id="numeroCard1" class="d-inline celdaTarjeta">0</div>
+                      <div id="numeroCard2" class="d-inline celdaTarjeta">0</div>
+                      <div id="numeroCard3" class="d-inline celdaTarjeta">0</div>
+                    </div>
+                    <div class="NumTarjeta">
+                      <div id="numeroCard4" class="d-inline celdaTarjeta">0</div>
+                      <div id="numeroCard5" class="d-inline celdaTarjeta">0</div>
+                      <div id="numeroCard6" class="d-inline celdaTarjeta">0</div>
+                      <div id="numeroCard7" class="d-inline celdaTarjeta">0</div>
+                    </div>
+                    <div class="NumTarjeta">
+                      <div id="numeroCard8" class="d-inline celdaTarjeta">0</div>
+                      <div id="numeroCard9" class="d-inline celdaTarjeta">0</div>
+                      <div id="numeroCard10" class="d-inline celdaTarjeta">0</div>
+                      <div id="numeroCard11" class="d-inline celdaTarjeta">0</div>
+                    </div>
+                    <div class="NumTarjeta">
+                      <div id="numeroCard12" class="d-inline celdaTarjeta">0</div>
+                      <div id="numeroCard13" class="d-inline celdaTarjeta">0</div>
+                      <div id="numeroCard14" class="d-inline celdaTarjeta">0</div>
+                      <div id="numeroCard15" class="d-inline celdaTarjeta">0</div>
+                    </div> 
+                  </div>
+                  <div class="vencimiento">
+                    <p class="d-inline pBeige">Fecha de Venc.:</p>
+                    <div id="vencimientoM1" class="d-inline celdaVencimiento">0</div>
+                    <div id="vencimientoM2" class="d-inline celdaVencimiento">0</div>
+                    <p class="d-inline pBeige">/</p>
+                    <div id="vencimientoA1" class="d-inline celdaVencimiento">0</div>
+                    <div id="vencimientoA2" class="d-inline celdaVencimiento">0</div>
+                  </div>
+                  <div class="codigo ">
+                    <p class="pBeige d-inline">CVV</p>
+                    <div id="cvv1"class="d-inline celdaVencimiento">0</div>
+                    <div id="cvv2"class="d-inline celdaVencimiento">0</div>
+                    <div id="cvv3"class="d-inline celdaVencimiento">0</div>
+                  </div>
+                </div>
+              </div>
+              <button id="botonFormCompra" class="w-75 btn btn-success btn-lg botonesFormCompra" type="submit">Realizar el Pago</button>
+              <button type="reset" class="btn btn-danger btn-lg botonesFormCompra">Limpiar Datos</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <div class="container">
+    <footer class="py-5 ">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>INTI CINEMA 🎬</h5>
+          <ul class="nav flex-column mt-3">
+            <li class="nav-item mb-2 linkFooter"><a href="../index.html" class="nav-link p-0 text-muted">Inicio</a></li>
+            <li class="nav-item mb-2 linkFooter"><a href="../index.html#irCartelera" class="nav-link p-0 text-muted">Cartelera</a></li>
+            <li class="nav-item mb-2 linkFooter"><a href="../index.html#irCartelera" class="nav-link p-0 text-muted">Tienda</a></li>
+            <li class="nav-item mb-2 linkFooter"><a href="./complejo.html" class="nav-link p-0 text-muted">Complejo</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 mb-3">
+          <h5>CARTELERA</h5>
+          <ul class="nav flex-column mt-3">
+            <li  class="nav-item mb-2 linkFooter"><a href="../index.html#irCartelera" class="nav-link p-0 text-muted">Películas</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 mb-3 ">
+          <h5>TIENDA</h5>
+          <ul class="nav flex-column mt-3">
+            <li class="nav-item mb-2 linkFooter"><a href="../index.html#irCartelera" class="nav-link p-0 text-muted">Combos</a></li>
+          </ul>
+        </div>
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribete a INTI Cinema 🎬</h5>
+            <p>Recibe información exclusiva de nuestros próximos estrenos.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="email" class="form-control" placeholder="Ingrese su correo electrónico...">
+              <button class="btn btn-secondary" type="button">Suscribir</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>&copy; 2022 Inti Cinema, Company. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/550430cf67.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script> 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/venta.js"></script>
+    <script src="../js/cronometro.js"></script>
+</body>
+</html>

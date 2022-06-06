@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "Spider-Man",
+        "imagen": "./assets/images/spider.jpg",
+        "descripcion": "Spiderman es la historia del tímido estudiante Peter Parker que es mordido por una araña contaminada de los radios radiactivos en el curso de un experimento científico."
+    },
+    {
+        "nombre": "Sangre Roja",
+        "imagen": "./assets/images/independiente.jpg",
+        "descripcion": "La historia de los primeros 100 años del glorioso Club Atlético Independiente el Orgullo Nacional"
+    },
+    {
+        "nombre": "Pokemón",
+        "imagen": "./assets/images/pokemon.png",
+        "descripcion": "Ash desea convertirse en un Maestro Pokémon y Brock en el mejor criador y que en compañía de sus amigos viajan alrededor del mundo ficticio de Pokémon."
+    }
+]
+

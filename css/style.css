@@ -1,0 +1,941 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: antiquewhite;
+}
+
+h1{
+    color: antiquewhite;
+    text-align: center;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid white;
+    font-size: 60px;
+}
+
+h2{
+    color: antiquewhite;
+    text-align: center;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+    font-size: 30px;
+    border-radius: 10px;
+    border-radius: 10px;
+}
+
+h3{
+    color: antiquewhite;
+    text-align: center;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+h4{
+    color:rgba(255, 255, 255, 0.859);
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+h5{
+    color:rgba(255, 255, 255, 0.639);
+    font-size: 14px;
+    padding: 2px;
+}
+
+.borderBlack{
+    border: black 1px solid;
+    border-radius: 10px;
+}
+
+.pBlack{
+    color: black;
+    font-weight: bold;
+}
+
+.pBeige{
+    color: antiquewhite;
+    font-weight: bold;
+}
+
+.contenedorMain{
+    margin: 60px 0px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contenedorPeliculas{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5,1fr);
+    margin-left: 20px;
+}
+
+.card{
+    border: #ffffff62 1px solid;
+    border-radius: 10px;
+    background-color: rgba(33,36,41,255);
+    }
+
+.imgProducto{
+    border: 1px rgba(255, 255, 255, 0.384) solid;
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    max-height: 300px;
+    cursor: pointer;
+}
+
+.imgProducto:hover{
+    border: 2px white solid;
+    transition: 0.5s all ease;
+}
+
+.card:hover{
+    transform: scale(1.03);
+    transition: 0.5s all ease;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.botonAgregar{
+    color: white;
+    background-color: rgba(80, 163, 73, 0.787);
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 10px;
+}
+
+.botonSeleccionar{
+    background-color: #433e3e;
+    border: 1px white solid;
+    margin: 10px 10px;
+    border-radius: 10px;
+}
+.fontSeleccionar{
+    color: #ffffffa3;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.estructuraTextoCarrusel{
+    position: absolute;
+    right: 15%;
+    bottom: 50%;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    text-align: center;
+    color: aliceblue;
+}
+
+.backgroundHero{
+    background-image: radial-gradient(black,transparent);
+    background-size: cover;
+    border-radius: 7px;
+}
+
+.BusquedaList{
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.594);
+    color: white;
+    border-radius: 0px 0px 5px 5px;
+}
+
+
+.cantidadCarrito{
+    color: green;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 5px 5px 15px 0px;
+    border: 2px green solid;
+    padding: 0px 10px;
+    border-radius: 100px;
+}
+
+.linkFiltro:hover{
+    cursor: pointer;
+    background-color: #323232;
+    display: inline;
+    padding: 0px 10px;
+    border-radius: 10px;
+    transition: 1s all ease;
+}
+
+.linkMenu:active{
+    transform: scale(1.05);
+    transition: 0.5s all ease;
+}
+
+.linkNav:hover{
+    transform: scale(1.1);
+    background-color: rgb(50, 50, 50) ;
+    transition: 0.5s all ease;
+    border-radius: 10px;
+}
+
+
+.fontBotonesCarrito{
+    margin: 10px;
+}
+
+.fontCarritoVacio{
+    text-align: center;
+    border-radius: 100px;
+    margin: 30px;
+    padding: 5px;
+}
+
+.fontCarritoLleno{
+    color: antiquewhite;
+    font-size: 14px;
+}
+
+.marginCarritoLleno{
+    margin: 10px 0px;
+}
+
+
+.imgBasura:hover{
+    transform: scale(1.1);
+    transition: 0.2s all ease;
+}
+
+.imgBasura{
+    cursor: pointer;
+    width: 10%;
+    border-radius: 40px;
+    border: #323232;
+
+}
+
+.fontPrecioTotal{
+    text-align: center;
+    border: 1px solid white;
+    margin: 0px 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.alertaCarrito{
+    width: 100px;
+}
+
+.gridPrincipal{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "titulo titulo titulo""area1 area2 area2";
+    margin: 20px 20px;
+    border: 1px white solid;
+    background-color: #151414;
+    border-radius: 10px;
+
+}
+
+.titulo{
+    grid-area: titulo;
+    margin: 10px 10px 0px 10px;
+    border-bottom: 1px solid white;
+    
+}
+
+.area1{
+    grid-area: area1;
+    margin: 20px 20px;
+    border-right:  1px solid white;
+
+}
+
+.area2{
+    grid-area: area2;
+    margin: 20px 20px;
+
+}
+
+.tarjetaCredito{
+    border: 1px rgb(169, 169, 169) solid;
+    border-radius: 30px;
+    width: 60%;
+    height: 300px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 3px 3px 3px rgb(118, 118, 118);
+}
+
+.tarjetaCredito:hover{
+    transform: scale(1.01);
+    transition: 0.5s all ease-in;
+}
+
+.gridTarjeta{
+    display: grid;
+    grid-template-columns: repeat(3,fr);
+    grid-template-areas:"logo tipo tipo"
+    "nombre nombre banco"
+    "numero numero numero"
+    "vencimiento vencimiento codigo";
+    background-image: linear-gradient(gray,black);
+    color: black;
+    font-weight: bold;
+}
+
+.logo{
+    grid-area: logo;
+    width: 60px;
+    margin-left: 20px;
+
+}
+
+.tipo{
+    grid-area: tipo;
+    text-align: left;
+    margin: 10px 0px 0px 60px;
+}
+
+.banco{
+    grid-area: banco;
+    text-align: right;
+    margin-right: 45px;
+}
+
+.numero{
+    grid-area: numero;
+    margin: 0px 5px;
+}
+
+.nombre{
+    grid-area: nombre;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.vencimiento{
+    grid-area: vencimiento;
+    text-align: left;
+    margin-left: 60px;
+}
+
+.codigo{
+    grid-area: codigo;
+    margin-right: 45px;
+}
+
+.NumTarjeta{
+    display: inline;
+    margin: 8px;
+}
+
+.celdaTarjeta{
+    border: 1px black solid;
+    padding: 6px;
+    background: rgb(147, 147, 147);
+    color: black;
+    border-radius: 5px;
+}
+  
+.celdaVencimiento{
+    border: 1px black solid;
+    padding: 6px;
+    background: rgb(147, 147, 147);
+    color: black;
+    border-radius: 5px;
+    margin: 0px 1px;
+    
+}
+
+.marginAuto{
+    margin: 0px auto;
+}
+
+.formFijarCarrito{
+    position: sticky;
+    top: 0;
+    margin-right: 20px;
+}
+
+.FijarCronometro{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    padding: 5px;
+    border: 1px gray solid;
+    box-shadow: 0px 0px 7px 2px rgb(63, 63, 63) inset;
+    margin: 5px;
+    background-color: #272727;
+    border-radius: 5px;
+
+}
+
+.FijarCronometro p{
+    font-weight: bold;
+    color: aliceblue;
+    font-size: 14px;
+    
+}
+
+.estructuraCronometro{
+    display: flex;
+    
+}
+
+.bloqueCronometro{
+    width: 80px;
+}
+
+
+.bloqueCronometro .tiempoDescripcion{
+    margin: 4px;
+    text-align: center;
+    font-size: 12px;
+    color: #afafaf;
+}
+
+
+.bloqueCronometro .tiempo{
+    margin: 4px;
+    text-align: center;
+    border: 1px white solid;
+    padding: 5px;
+    border-radius: 5px ;
+    background-color: rgb(196, 196, 196);
+    color: rgb(244, 35, 35);
+    box-shadow: 0px 0px 7px 2px gray inset;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.formCarrito{
+    width: 80%;
+    margin: auto;
+}
+
+.linkFooter:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.botonesFormCompra{
+    margin: 0px 10px;
+}
+
+.fontTotal{
+    font-weight: bold;
+}
+
+.bg-descuento{
+    background-color: rgb(147, 180, 116);
+}
+
+.bg-total{
+    background-color: rgb(231, 230, 230);
+
+}
+
+.fontTipoTarjeta{
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.btnBuscador{
+    border-radius: 30px  0px 0px 30px;
+    background-color: #f2f1f1;
+}
+
+.btnBuscar{
+    border-radius: 0px  30px 30px 0px;
+    font-weight: bold;
+}
+
+
+.publicidadEstrenos{
+    margin: 50px;
+    border-radius: 10px;
+    background-image: url("https://cdn.pixabay.com/photo/2020/11/25/09/30/girls-5775077_960_720.jpg");
+    background-size: cover;
+}
+
+.displayNone{
+    display: none;
+}
+
+.cardEstrenos{
+    margin: 15px;
+}
+
+.cardTitle{
+    margin-bottom: 10px;
+}
+
+.gridBoton{
+    grid-area: boton;
+    display: flex;
+    justify-content: end;
+}
+
+.btnCancel{
+    background-color: #373434;
+    border: 1px solid red;
+    border-radius: 100px;
+    margin: 10px;
+}
+
+.btnCancel:hover{
+    background-color: #414141;
+}
+
+.gridPublicidad{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "vacio titulo boton";
+}
+
+.gridTitulo{
+    grid-area: titulo;
+}
+
+.sala{
+    display: grid;
+    grid-template-columns: repeat(11,60px);
+    grid-template-rows: repeat(11,60px);
+    grid-template-areas: 
+    "numeroB libre1 pantalla pantalla pantalla pantalla pantalla pantalla pantalla pantalla libre2"
+    "numeroB libre3 libre3 libre3 libre3 libre3 libre3 libre3 libre3 libre3 libre3"
+    "numeroB1 butaca1A butaca1B libre4 butaca1C butaca1D butaca1E butaca1F libre5 butaca1G butaca1H"
+    "numeroB2 butaca2A butaca2B libre4 butaca2C butaca2D butaca2E butaca2F libre5 butaca2G butaca2H"
+    "numeroB3 butaca3A butaca3B libre4 butaca3C butaca3D butaca3E butaca3F libre5 butaca3G butaca3H"
+    "numeroB4 butaca4A butaca4B libre4 butaca4C butaca4D butaca4E butaca4F libre5 butaca4G butaca4H"
+    "numeroB5 butaca5A butaca5B libre4 butaca5C butaca5D butaca5E butaca5F libre5 butaca5G butaca5H"
+    "numeroB6 butaca6A butaca6B libre4 butaca6C butaca6D butaca6E butaca6F libre5 butaca6G butaca6H"
+    "numeroB7 butaca7A butaca7B libre4 butaca7C butaca7D butaca7E butaca7F libre5 butaca7G butaca7H"
+    "numeroB8 butaca8A butaca8B libre4 butaca8C butaca8D butaca8E butaca8F libre5 butaca8G butaca8H"
+    "numeroB9 letraBA letraBB libre4 letraBC letraBD letraBE letraBF libre5 letraBG letraBH";
+    justify-content: center;
+}
+
+.margin50Auto{
+    margin: 50px auto;
+}
+
+.margin50Auto0Auto{
+    margin: 50px auto 0px auto;
+}
+
+.libre1{
+    grid-area: libre1;
+    background-color: #3a3a3a;
+}
+.libre2{
+    grid-area: libre2;
+    background-color: #3a3a3a;
+}
+.libre3{
+    grid-area: libre3;
+    background-color: #3a3a3a;
+}
+.libre4{
+    grid-area: libre4;
+    background-color: #3a3a3a;
+}
+.libre5{
+    grid-area: libre5;
+    background-color: #3a3a3a;
+}
+
+
+.pantalla{
+    grid-area: pantalla;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid black;
+    text-align: center;
+    font-weight: bold;
+    align-self: center;
+
+}
+
+.NumerosSala{
+    text-align: center;
+    background-color: #d44242;
+    color: #151414;
+    font-weight: bold;
+}
+
+.numeroB{
+    grid-area: numeroB;
+    background-color: #3a3a3a;
+}
+
+.numeroB1{
+    grid-area: numeroB1;
+}
+.numeroB2{
+    grid-area: numeroB2;
+}
+.numeroB3{
+    grid-area: numeroB3;
+}
+.numeroB4{
+    grid-area: numeroB4;
+}
+.numeroB5{
+    grid-area: numeroB5;
+}
+.numeroB6{
+    grid-area: numeroB6;
+}
+.numeroB7{
+    grid-area: numeroB7;
+}
+.numeroB8{
+    grid-area: numeroB8;
+}
+.numeroB9{
+    grid-area: numeroB9;
+}
+
+.butacasSala:hover{
+    border: #d44242 solid 1px;
+}
+
+.butaca1A{
+    grid-area: butaca1A;
+}
+.butaca1B{
+    grid-area: butaca1B;
+}
+.butaca1C{
+    grid-area: butaca1C;
+}
+.butaca1D{
+    grid-area: butaca1D;
+}
+.butaca1E{
+    grid-area: butaca1E;
+}
+.butaca1F{
+    grid-area: butaca1F;
+}
+.butaca1G{
+    grid-area: butaca1G;
+    background-color: forestgreen;
+}
+.butaca1H{
+    grid-area: butaca1H;
+}
+
+
+.butaca2A{
+    grid-area: butaca2A;
+}
+.butaca2B{
+    grid-area: butaca2B;
+}
+.butaca2C{
+    grid-area: butaca2C;
+}
+.butaca2D{
+    grid-area: butaca2D;
+}
+.butaca2E{
+    grid-area: butaca2E;
+}
+.butaca2F{
+    grid-area: butaca2F;
+}
+.butaca2G{
+    grid-area: butaca2G;
+}
+.butaca2H{
+    grid-area: butaca2H;
+}
+
+
+.butaca3A{
+    grid-area: butaca3A;
+}
+.butaca3B{
+    grid-area: butaca3B;
+}
+.butaca3C{
+    grid-area: butaca3C;
+}
+.butaca3D{
+    grid-area: butaca3D;
+}
+.butaca3E{
+    grid-area: butaca3E;
+}
+.butaca3F{
+    grid-area: butaca3F;
+}
+.butaca3G{
+    grid-area: butaca3G;
+}
+.butaca3H{
+    grid-area: butaca3H;
+}
+
+.butaca4A{
+    grid-area: butaca4A;
+}
+.butaca4B{
+    grid-area: butaca4B;
+}
+.butaca4C{
+    grid-area: butaca4C;
+}
+.butaca4D{
+    grid-area: butaca4D;
+}
+.butaca4E{
+    grid-area: butaca4E;
+}
+.butaca4F{
+    grid-area: butaca4F;
+}
+.butaca4G{
+    grid-area: butaca4G;
+}
+.butaca4H{
+    grid-area: butaca4H;
+}
+
+
+.butaca5A{
+    grid-area: butaca5A;
+}
+.butaca5B{
+    grid-area: butaca5B;
+}
+.butaca5C{
+    grid-area: butaca5C;
+}
+.butaca5D{
+    grid-area: butaca5D;
+}
+.butaca5E{
+    grid-area: butaca5E;
+}
+.butaca5F{
+    grid-area: butaca5F;
+}
+.butaca5G{
+    grid-area: butaca5G;
+}
+.butaca5H{
+    grid-area: butaca5H;
+}
+
+
+.butaca6A{
+    grid-area: butaca6A;
+}
+.butaca6B{
+    grid-area: butaca6B;
+}
+.butaca6C{
+    grid-area: butaca6C;
+}
+.butaca6D{
+    grid-area: butaca6D;
+}
+.butaca6E{
+    grid-area: butaca6E;
+}
+.butaca6F{
+    grid-area: butaca6F;
+}
+.butaca6G{
+    grid-area: butaca6G;
+}
+.butaca6H{
+    grid-area: butaca6H;
+}
+
+
+.butaca7A{
+    grid-area: butaca7A;
+}
+.butaca7B{
+    grid-area: butaca7B;
+}
+.butaca7C{
+    grid-area: butaca7C;
+}
+.butaca7D{
+    grid-area: butaca7D;
+}
+.butaca7E{
+    grid-area: butaca7E;
+}
+.butaca7F{
+    grid-area: butaca7F;
+}
+.butaca7G{
+    grid-area: butaca7G;
+}
+.butaca7H{
+    grid-area: butaca7H;
+}
+
+
+.butaca8A{
+    grid-area: butaca8A;
+}
+.butaca8B{
+    grid-area: butaca8B;
+}
+.butaca8C{
+    grid-area: butaca8C;
+}
+.butaca8D{
+    grid-area: butaca8D;
+}
+.butaca8E{
+    grid-area: butaca8E;
+}
+.butaca8F{
+    grid-area: butaca8F;
+}
+.butaca8G{
+    grid-area: butaca8G;
+}
+.butaca8H{
+    grid-area: butaca8H;
+}
+
+.LetrasSala{
+    text-align: center;
+    background-color: #ed6464;
+    color: #151414;
+    font-weight: bold;
+}
+
+
+.letraBA{
+    grid-area: letraBA;
+}
+.letraBB{
+    grid-area: letraBB;
+}
+.letraBC{
+    grid-area: letraBC;
+}
+.letraBD{
+    grid-area: letraBD;
+}
+.letraBE{
+    grid-area: letraBE;
+}
+.letraBF{
+    grid-area: letraBF;
+}
+.letraBG{
+    grid-area: letraBG;
+}
+.letraBH{
+    grid-area: letraBH;
+}
+
+.gridFuncion{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "pelicula sala";
+
+}
+
+.contenedorSala{
+    grid-area: pelicula;
+}
+
+.estructuraPeliculaSala{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid #433e3e;
+
+}
+.imgSala{
+    width: 100%;
+    border-top: #323232 1px solid;
+}
+
+.gridSala{
+    grid-area: sala;
+}
+
+
+.imgTicket{
+    background-image: url("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/movie-tickets-design-template-f861f194f7d6b46380f0adae62c0d504_screen.jpg?ts=1561504605");
+    background-size: contain;
+    width:100%;
+    height: 100px;
+    margin: 20px 0px;
+}
+
+
+.imgComplejo1{
+    background-image: url("https://designinterexpmmd.files.wordpress.com/2014/10/4dx-pj2-628x269.jpg");
+    background-size: cover;
+    background-position:bottom;
+    transition: all 1s ease-in;
+}
+
+.imgComplejo1:hover{
+    transform: scale(1.1);
+}
+
+
+.imgComplejo2{
+    background-image: url("https://i.blogs.es/1bf3a9/4dxap/1366_2000.jpg");
+    background-size: cover;
+
+}
+
+.imgMap{
+    width: 100%;
+    height: 100%;
+    margin: 15px;
+    border-radius: 15px 5px 0px 5px ;
+}
+
+.bg-black{
+    background-color: #000000;
+}
+
+.contenedorRedes{
+    border-bottom: 1px solid #433e3e;
+    border-top: 1px solid #433e3e;
+}
+
+.redesSociales{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+
+}
+
+.redSocial{
+    width: 30px;
+}
+
+.redSocial:hover{
+    cursor: pointer
+}
