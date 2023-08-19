@@ -10,13 +10,13 @@ function cargarTiempo(){
     if(inicioSegundos<0){
         inicioSegundos=59;
         segundos.innerHTML=inicioSegundos;
-    if(inicioSegundos==59){
-        minutos.innerHTML=`0${inicioMinutos-=1}`;
-    }
-    }else if(inicioSegundos<10){
-        segundos.innerHTML=`0${inicioSegundos}`;
-    }else{
-        segundos.innerHTML=inicioSegundos;
+        if(inicioSegundos==59){
+            minutos.innerHTML=`0${inicioMinutos-=1}`;
+        }
+        }else if(inicioSegundos<10){
+            segundos.innerHTML=`0${inicioSegundos}`;
+        }else{
+            segundos.innerHTML=inicioSegundos;
     }
     if(inicioMinutos === 0 && inicioSegundos === 0){
         clearInterval(inicionInterval);

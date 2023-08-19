@@ -344,7 +344,7 @@ formularioCompra.addEventListener("submit",(e)=>{
             )
             formularioCompra.reset();
             localStorage.removeItem("AcumulacionCarrito");
-            localStorage.removeItem("contadorCarrito");
+            local.removeItem("contadorCarrito");
             setTimeout(()=>{
                 document.location.href="../index.html";
             },2500)
