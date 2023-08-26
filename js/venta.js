@@ -344,10 +344,10 @@ formularioCompra.addEventListener("submit",(e)=>{
             )
             formularioCompra.reset();
             localStorage.removeItem("AcumulacionCarrito");
-            local.removeItem("contadorCarrito");
+            localStorage.removeItem("contadorCarrito");
             setTimeout(()=>{
                 document.location.href="../index.html";
-            },2500)
+            },2000)
         }
     })
 }
