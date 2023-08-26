@@ -5,9 +5,9 @@
         "descripcion": "Spiderman es la historia del tímido estudiante Peter Parker que es mordido por una araña contaminada de los radios radiactivos en el curso de un experimento científico."
     },
     {
-        "nombre": "Sangre Roja",
-        "imagen": "./assets/images/independiente.jpg",
-        "descripcion": "La historia de los primeros 100 años del glorioso Club Atlético Independiente el Orgullo Nacional"
+        "nombre": "Mario Bros",
+        "imagen": "./assets/images/marioBros.jpg",
+        "descripcion": "Un fontanero llamado Mario viaja por un laberinto subterráneo con su hermano, Luigi, intentando salvar a una princesa capturada."
     },
     {
         "nombre": "Pokemón",
